@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebSocket API Example</title>
+  </head>
+  <body>
+    <script>
+      const socket = new WebSocket('ws://localhost:8080/ws/room'); // Replace with your own WebSocket URL and room name
+      socket.onopen = function () {
+        console.log('WebSocket connection opened');
+        // Send a message to the server
+        // socket.send('Hello Server!');
+      };
+      socket.onmessage = function (event) {
+        console.log(`Received message from server: ${event.data}`);
+      };
+    //   socket.onclose = function () {
+    //     console.log('WebSocket connection closed');
+    //   };
+    </script>
+  </body>
+</html>
